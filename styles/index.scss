@@ -1,0 +1,37 @@
+@import 'variables';
+@import 'header';
+@import 'mixin';
+footer {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section button {
+    @include buttonStyle();
+    background-color: green;
+}
+
+footer {
+    button {}
+    @include buttonStyle();
+    p {
+        font-size: 30px;
+    }
+}
+
+%buttonStyle {
+    background: blue;
+    padding: 5px 10px;
+    border: 0;
+    color: white;
+}
+
+.button1 {
+    @extend %buttonStyle;
+}
+
+.button2 {
+    @extend %buttonStyle;
+}
